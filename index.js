@@ -18,7 +18,8 @@ app.get("/", async (req, res) => {
         res.render("index.ejs", { aqi: aqi, mainPollutant: mainPollutant, timeStamp: timeStamp });    
     } catch (error) {
         console.log(error.response.data);
-        res.status(500);
+        res.render("index.ejs", { error: JSON.stringify(error.response.data.data.message) }); 
+
     }
 });
 

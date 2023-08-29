@@ -11,12 +11,16 @@
 </head>
 <body>
     <h1>Air Quality in Toronto Now</h1>
-    <h3>Air Quality: <%= aqi %></h3>
-    <h3>Main Pollutant: <%= mainPollutant %></h3>
-    <h3>Date: <%= timeStamp %></h3>
-    <div>
-        <h2>Air Quality Index Chart</h2>
-        <img src="images/aqi-chart.png" alt="Air quality index chart with corresponding PM2.5 μg/m3.">
-    </div>
+    <% if (locals.error) { %>
+        <%= error %>
+    <% } else { %>
+        <h3>Air Quality: <%= aqi %></h3>
+        <h3>Main Pollutant: <%= mainPollutant %></h3>
+        <h3>Date: <%= timeStamp %></h3>
+        <div>
+            <h2>Air Quality Index Chart</h2>
+            <img src="images/aqi-chart.png" alt="Air quality index chart with corresponding PM2.5 μg/m3.">
+        </div>
+    <% } %>
 </body>
 </html>
