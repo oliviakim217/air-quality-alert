@@ -1,0 +1,20 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+  }
+
+h1, h3, div {
+    font-family: 'Caveat', cursive;
+    font-family: 'Roboto Slab', serif;
+    margin-bottom: 20px;
+}
+
+div {
+    margin: 5%;
+    text-align: center;
+}
